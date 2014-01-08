@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    %title README
+    %link{:href => '/stylesheets/main.css', :rel => 'stylesheet', :type => 'text/css'}
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type" }
+  %body
+    #container
+      #content= yield
+      #footer
+        %p#legal= "&mdash; &copy; #{Time.now.strftime('%Y')} BielSystems &mdash;"

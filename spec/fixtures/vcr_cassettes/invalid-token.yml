@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://invalid-token:X@app.cobregratis.com.br/bank_billets.xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <bank-billet>
+          <address>Av. Candango 321 489</address>
+          <amount type="float">70.0</amount>
+          <bank-billet-account-id>277</bank-billet-account-id>
+          <city>Niterói</city>
+          <cnpj-cpf>89234567831</cnpj-cpf>
+          <email>
+            <address>email@example.com</address>
+            <name>Rafael</name>
+          </email>
+          <expire-at type="date">2014-01-14</expire-at>
+          <meta>{"order_id":219230809,"order_number":1002}</meta>
+          <name>Rafael Lima</name>
+          <neighborhood>Santo Antônio</neighborhood>
+          <service-id>1349</service-id>
+          <state>RJ</state>
+          <zipcode>21324-009</zipcode>
+        </bank-billet>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/xml; charset=utf-8
+      Date:
+      - Wed, 08 Jan 2014 05:16:56 GMT
+      Server:
+      - thin 1.6.1 codename Death Proof
+      Set-Cookie:
+      - _cobregratis-app_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJWUzODVhZjc5OGZkZTVhYTYwZjNkNTllMzcyZmEyNDMxBjsAVA%3D%3D--3a0c619b934c84f7c41febb6ae0e845f5a72e9ea;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Www-Authenticate:
+      - Basic realm="CobreGratis"
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Ratelimit-Limit:
+      - '500'
+      X-Ratelimit-Remaining:
+      - '499'
+      X-Request-Id:
+      - f66a0fc12c62d1d5bf00dfba262f7554
+      X-Runtime:
+      - '0.036588'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '115'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGVycm9y
+        cz4KICA8ZXJyb3I+RS1tYWlsIG91IHNlbmhhIGludsOhbGlkb3MuPC9lcnJv
+        cj4KPC9lcnJvcnM+Cg==
+    http_version: 
+  recorded_at: Wed, 08 Jan 2014 05:16:57 GMT
+recorded_with: VCR 2.8.0
