@@ -62,7 +62,7 @@ class Parser
     end
 
     def expire_at
-      (Time.parse(params['updated_at'])+604800).to_date
+      (Time.parse(params['updated_at'])+259200).to_date
     end
 
     def name

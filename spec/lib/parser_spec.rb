@@ -34,12 +34,12 @@ describe Parser do
     it {
       parser.bank_billet_attributes.should == {
         amount: 70.00,
-        expire_at: Date.parse('2014-01-14'),
+        expire_at: Date.parse('2014-01-11'),
         name: "Rafael Lima",
         cnpj_cpf: "89234567831",
         address: "Av. Candango 321 489",
-        neighborhood: "Santo Antônio",
-        city: "Niterói",
+        neighborhood: "Guaranim",
+        city: "Rio de Janeiro",
         state: "RJ",
         zipcode: "21324-009",
         email: {
