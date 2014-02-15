@@ -59,12 +59,14 @@ Para usufruir da integração, não é necessário usar este código de programa
 
 	1. Clique em *Save webhook*
 
+1. Os boletos serão gerados com vencimento para 3 dias após a data do pedido.
+
 1. Faça uma compra de teste e verifique se o boleto bancário será gerado na sua conta do Cobre Grátis e será enviado por e-mail para o comprador.
 
 Em caso de dúvidas, abra um ticket no [suporte] [support].
 
   [cg]: http://cobregratis.com.br
-  [shopify]: http://shopify.com
+  [shopify]: http://shopify.com/?ref=cobregratis
   [integration]: https://app.cobregratis.com.br/integration
   [myinfo]: https://app.cobregratis.com.br/myinfo
   [support]: http://suporte.cobregratis.com.br
