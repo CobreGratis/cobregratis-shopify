@@ -10,6 +10,7 @@ class Parser
 
   def valid_to_process?
     confirmed? and
+    !cancelled? and
     currency_brl? and
     financial_status_pending? and
     manual_processing_method? and
@@ -39,6 +40,10 @@ class Parser
 
     def confirmed?
       params['confirmed'] == true
+    end
+
+    def cancelled?
+      params['cancelled_at'] != nil
     end
 
     def currency_brl?
