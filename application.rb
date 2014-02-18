@@ -28,7 +28,6 @@ post '/:token/:service_id/:bank_billet_account_id' do
     Cobregratis::BankBillet.user = params[:token]
     Cobregratis::BankBillet.password = 'X'
     Cobregratis::BankBillet.format = :xml
-    Cobregratis::BankBillet.connection.cache_store = nil
     bank_billet_attributes = parser.bank_billet_attributes.merge(service_id: params[:service_id], bank_billet_account_id: params[:bank_billet_account_id])
     LOG.info "----> Bank Billet Attributes = #{bank_billet_attributes.inspect}"
     if Cobregratis::BankBillet.create(bank_billet_attributes)

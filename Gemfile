@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'sinatra', '1.4.4'
-gem 'cobregratis', '0.3.0'
+gem 'cobregratis', '0.4.0'
 gem 'maruku', '0.7.0'
 gem 'haml', '4.0.5'
 gem 'rack-canonical-host', '0.0.8'
