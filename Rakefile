@@ -1,20 +1,8 @@
-require 'rubygems'
-require 'bundler/setup'
+require 'rspec/core/rake_task'
 
-begin
-  require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec)
 
-  task :default => :test
-  task :test => :spec
+task :default => :spec
 
-  if !defined?(RSpec)
-    puts "spec targets require RSpec"
-  else
-    desc "Run all examples"
-    RSpec::Core::RakeTask.new(:spec) do |t|
-      #t.pattern = 'spec/**/*_spec.rb' # not needed this is default
-      t.rspec_opts = ['-cfs']
-    end
-  end
-rescue LoadError
-end
+
+ENV['COBREGRATIS_TOKEN']='j9MzJFj6CBK72aXgGFGH'
