@@ -8,25 +8,24 @@ http_interactions:
       string: |
         <?xml version="1.0" encoding="UTF-8"?>
         <bank-billet>
-          <address>Av. Candango 321 489</address>
           <amount type="float">70.0</amount>
-          <bank-billet-account-id>277</bank-billet-account-id>
-          <city>Niterói</city>
-          <cnpj-cpf>89234567831</cnpj-cpf>
-          <email>
-            <address>email@example.com</address>
-            <name>Rafael</name>
-          </email>
-          <expire-at type="date">2014-01-14</expire-at>
-          <meta>
-            <order-id type="integer">219230809</order-id>
-            <order-number type="integer">1002</order-number>
-          </meta>
+          <expire-at type="date">2014-01-11</expire-at>
           <name>Rafael Lima</name>
-          <neighborhood>Santo Antônio</neighborhood>
-          <service-id>1349</service-id>
+          <cnpj-cpf>89234567831</cnpj-cpf>
+          <address>Av. Candango 321 489</address>
+          <neighborhood>Guaranim</neighborhood>
+          <city>Rio de Janeiro</city>
           <state>RJ</state>
           <zipcode>21324-009</zipcode>
+          <generate-on-creation type="boolean">true</generate-on-creation>
+          <send-email-on-creation type="boolean">true</send-email-on-creation>
+          <email>
+            <name>Rafael</name>
+            <address>email@example.com</address>
+          </email>
+          <meta>{"order_id":219230809,"order_number":1002}</meta>
+          <service-id>57</service-id>
+          <bank-billet-account-id>42</bank-billet-account-id>
         </bank-billet>
     headers:
       Content-Type:
@@ -47,30 +46,33 @@ http_interactions:
       Content-Type:
       - application/xml; charset=utf-8
       Date:
-      - Wed, 08 Jan 2014 05:10:35 GMT
+      - Fri, 08 Aug 2014 20:31:05 GMT
       Etag:
-      - '"8d9ab19725d0a04237b9859e159a3e66"'
+      - '"7110f8d0971a5bddf2b7cf9d89015bc5"'
       Location:
-      - https://app.cobregratis.com.br/bank_billets/301702
-      Server:
-      - thin 1.6.1 codename Death Proof
-      Set-Cookie:
-      - _cobregratis-app_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJWNlZjgzNjEwN2I1ZjUyMzkwZjlkNWYzZjBjNDQ5MDg5BjsAVA%3D%3D--6046b1d98e51f7567a6e42bb869a09a0c5edcd67;
-        path=/; HttpOnly
+      - https://app.cobregratis.com.br/bank_billets/501030
+      Status:
+      - 201 Created
       Vary:
       - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - ALLOWALL
       X-Rack-Cache:
       - invalidate, pass
       X-Ratelimit-Limit:
       - '500'
       X-Ratelimit-Remaining:
-      - '498'
+      - '499'
       X-Request-Id:
-      - 139d6d51a2c4df5b0426599480fc12ab
+      - 67b11290-b83f-4290-89d9-31d46dc80a59
       X-Runtime:
-      - '0.540154'
+      - '1.573189'
       X-Ua-Compatible:
-      - IE=Edge,chrome=1
+      - chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
       Transfer-Encoding:
       - chunked
       Connection:
@@ -79,66 +81,72 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGJhbmst
-        YmlsbGV0PgogIDxhY2NlcHRhbmNlPk48L2FjY2VwdGFuY2U+CiAgPGFkZHJl
-        c3M+QXYuIFJ1aSBCYXJib3NhIDQ1NyAzMDE8L2FkZHJlc3M+CiAgPGFzc2ln
-        bm9yLWNvZGUgbmlsPSJ0cnVlIi8+CiAgPGJhbmstYmlsbGV0LWFjY291bnQt
-        aWQgdHlwZT0iaW50ZWdlciI+Mjc3PC9iYW5rLWJpbGxldC1hY2NvdW50LWlk
-        PgogIDxiYW5rLWJpbGxldC1zdWJzY3JpcHRpb24taWQgdHlwZT0iaW50ZWdl
-        ciIgbmlsPSJ0cnVlIi8+CiAgPGNpdHk+Tml0ZXLDs2k8L2NpdHk+CiAgPGNu
-        cGotY3BmIHR5cGU9IkNwZiI+MDkxLjE2MC41OTctNTE8L2NucGotY3BmPgog
-        IDxjb21tZW50cyBuaWw9InRydWUiLz4KICA8Y3JlYXRlZC1hdCB0eXBlPSJk
-        YXRldGltZSI+MjAxNC0wMS0wOFQwMzoxMDozNC0wMjowMDwvY3JlYXRlZC1h
-        dD4KICA8Y3JlYXRlZC1ieS1hcGkgdHlwZT0iYm9vbGVhbiI+dHJ1ZTwvY3Jl
-        YXRlZC1ieS1hcGk+CiAgPGN1cnJlbmN5PlIkPC9jdXJyZW5jeT4KICA8Y3Vz
-        dG9tZXItaWQgdHlwZT0iaW50ZWdlciIgbmlsPSJ0cnVlIi8+CiAgPGRlc2Ny
-        aXB0aW9uIG5pbD0idHJ1ZSIvPgogIDxkb2N1bWVudC1kYXRlIHR5cGU9ImRh
-        dGUiIG5pbD0idHJ1ZSIvPgogIDxkb2N1bWVudC1udW1iZXIgbmlsPSJ0cnVl
-        Ii8+CiAgPGRvY3VtZW50LXR5cGUgbmlsPSJ0cnVlIi8+CiAgPGVtYWlsLWRl
-        bGF5ZWQtYXQgdHlwZT0iZGF0ZXRpbWUiIG5pbD0idHJ1ZSIvPgogIDxlbWFp
-        bC1zZW50LWF0IHR5cGU9ImRhdGV0aW1lIiBuaWw9InRydWUiLz4KICA8ZW1h
-        aWwtc3RhdGUgdHlwZT0iaW50ZWdlciIgbmlsPSJ0cnVlIi8+CiAgPGV4cGly
-        ZS1hdCB0eXBlPSJkYXRlIj4yMDE0LTAxLTE0PC9leHBpcmUtYXQ+CiAgPGV4
-        dGVybmFsLWZvcm0taWQgdHlwZT0iaW50ZWdlciIgbmlsPSJ0cnVlIi8+CiAg
-        PGdlbmVyYXRlZC1hdCB0eXBlPSJkYXRldGltZSIgbmlsPSJ0cnVlIi8+CiAg
-        PGd1YXJhbnRvciBuaWw9InRydWUiLz4KICA8aG9tb2xvZ2F0aW9uIHR5cGU9
-        ImJvb2xlYW4iPmZhbHNlPC9ob21vbG9nYXRpb24+CiAgPGh0bWwtY3JlYXRl
-        ZC1hdCB0eXBlPSJkYXRldGltZSIgbmlsPSJ0cnVlIi8+CiAgPGh0bWwtZGVs
-        YXllZC1hdCB0eXBlPSJkYXRldGltZSI+MjAxNC0wMS0wOFQwMzoxMDozNC0w
-        MjowMDwvaHRtbC1kZWxheWVkLWF0PgogIDxodG1sLXN0YXRlIHR5cGU9Imlu
-        dGVnZXIiPjA8L2h0bWwtc3RhdGU+CiAgPGlkIHR5cGU9ImludGVnZXIiPjMw
-        MTcwMjwvaWQ+CiAgPGluc3RydWN0aW9ucyBuaWw9InRydWUiLz4KICA8a2lu
-        ZD5ub3JtYWw8L2tpbmQ+CiAgPGxpbmUgbmlsPSJ0cnVlIi8+CiAgPG1ldGEg
-        dHlwZT0iYmluYXJ5IiBuaWw9InRydWUiIGVuY29kaW5nPSJiYXNlNjQiLz4K
-        ICA8bmFtZT5SYWZhZWwgTGltYTwvbmFtZT4KICA8bmVpZ2hib3Job29kPlPD
-        o28gRnJhbmNpc2NvPC9uZWlnaGJvcmhvb2Q+CiAgPG5vdGlmeS1vdmVyZHVl
-        IHR5cGU9ImJvb2xlYW4iPmZhbHNlPC9ub3RpZnktb3ZlcmR1ZT4KICA8b3Vy
-        LW51bWJlcj4wMDAwMDA1MDAxMzU0PC9vdXItbnVtYmVyPgogIDxvdXItbnVt
-        YmVyLXJhdyBuaWw9InRydWUiLz4KICA8b3ZlcmR1ZS1ub3RpZmllZC1hdCB0
-        eXBlPSJkYXRldGltZSIgbmlsPSJ0cnVlIi8+CiAgPHBhaWQtYXQgdHlwZT0i
-        ZGF0ZSIgbmlsPSJ0cnVlIi8+CiAgPHBhcmNlbCB0eXBlPSJpbnRlZ2VyIj4x
-        PC9wYXJjZWw+CiAgPHBkZi1jcmVhdGVkLWF0IHR5cGU9ImRhdGV0aW1lIj4y
-        MDE0LTAxLTA4VDAzOjEwOjM0LTAyOjAwPC9wZGYtY3JlYXRlZC1hdD4KICA8
-        cGRmLWRlbGF5ZWQtYXQgdHlwZT0iZGF0ZXRpbWUiPjIwMTQtMDEtMDhUMDM6
-        MTA6MzQtMDI6MDA8L3BkZi1kZWxheWVkLWF0PgogIDxwZGYtc3RhdGUgdHlw
-        ZT0iaW50ZWdlciI+MTwvcGRmLXN0YXRlPgogIDxwZXJjZW50LWZpbmVzIHR5
-        cGU9ImRlY2ltYWwiIG5pbD0idHJ1ZSIvPgogIDxwZXJjZW50LWludGVyZXN0
-        LWRheSB0eXBlPSJkZWNpbWFsIiBuaWw9InRydWUiLz4KICA8cHJvY2Vzc2Vk
-        LW91ci1udW1iZXIgbmlsPSJ0cnVlIi8+CiAgPHF1YW50aXR5IG5pbD0idHJ1
-        ZSIvPgogIDxzZXJ2aWNlLWlkIHR5cGU9ImludGVnZXIiPjEzNDk8L3NlcnZp
-        Y2UtaWQ+CiAgPHN0YXRlPlJKPC9zdGF0ZT4KICA8c3RhdHVzPmQ8L3N0YXR1
-        cz4KICA8c3ViZGl2aXNpb24tcGFyZW50LWlkIHR5cGU9ImludGVnZXIiIG5p
-        bD0idHJ1ZSIvPgogIDx1cGRhdGVkLWF0IHR5cGU9ImRhdGV0aW1lIj4yMDE0
-        LTAxLTA4VDAzOjEwOjM0LTAyOjAwPC91cGRhdGVkLWF0PgogIDx6aXBjb2Rl
-        PjI0MzYwLTQ0MDwvemlwY29kZT4KICA8ZXh0ZXJuYWwtbGluaz5odHRwOi8v
-        Ym9sZS50by8zdGZ6NmdzbTwvZXh0ZXJuYWwtbGluaz4KICA8aGFzaGNvZGU+
-        M3RmejZnc208L2hhc2hjb2RlPgogIDxjYXJuZXQtZXh0ZXJuYWwtbGluayBu
-        aWw9InRydWUiLz4KICA8YW1vdW50IHR5cGU9ImZsb2F0Ij43MC4wPC9hbW91
-        bnQ+CiAgPHBhaWRfYW1vdW50IHR5cGU9ImZsb2F0Ij4wLjA8L3BhaWRfYW1v
-        dW50PgogIDxkb2N1bWVudF9hbW91bnQgdHlwZT0iZmxvYXQiPjAuMDwvZG9j
-        dW1lbnRfYW1vdW50PgogIDxkaXNjb3VudF9hbW91bnQgdHlwZT0iZmxvYXQi
-        PjAuMDwvZGlzY291bnRfYW1vdW50PgogIDxvdGhlcl9hbW91bnRfdG9fYWRk
-        IHR5cGU9ImZsb2F0Ij4wLjA8L290aGVyX2Ftb3VudF90b19hZGQ+CjwvYmFu
-        ay1iaWxsZXQ+Cg==
-    http_version: 
-  recorded_at: Wed, 08 Jan 2014 05:10:36 GMT
-recorded_with: VCR 2.8.0
+        YmlsbGV0PgogIDxpZCB0eXBlPSJpbnRlZ2VyIj41MDEwMzA8L2lkPgogIDxz
+        ZXJ2aWNlLWlkIHR5cGU9ImludGVnZXIiPjU3PC9zZXJ2aWNlLWlkPgogIDxj
+        cmVhdGVkLWF0IHR5cGU9ImRhdGVUaW1lIj4yMDE0LTA4LTA4VDE3OjMxOjA1
+        LTAzOjAwPC9jcmVhdGVkLWF0PgogIDx1cGRhdGVkLWF0IHR5cGU9ImRhdGVU
+        aW1lIj4yMDE0LTA4LTA4VDE3OjMxOjA1LTAzOjAwPC91cGRhdGVkLWF0Pgog
+        IDxnZW5lcmF0ZWQtYXQgdHlwZT0iZGF0ZVRpbWUiIG5pbD0idHJ1ZSIvPgog
+        IDxjcmVhdGVkLWJ5LWFwaSB0eXBlPSJib29sZWFuIj50cnVlPC9jcmVhdGVk
+        LWJ5LWFwaT4KICA8ZXhwaXJlLWF0IHR5cGU9ImRhdGUiPjIwMTQtMDEtMTE8
+        L2V4cGlyZS1hdD4KICA8cGFpZC1hdCB0eXBlPSJkYXRlIiBuaWw9InRydWUi
+        Lz4KICA8ZG9jdW1lbnQtbnVtYmVyIG5pbD0idHJ1ZSIvPgogIDxkb2N1bWVu
+        dC1kYXRlIHR5cGU9ImRhdGUiIG5pbD0idHJ1ZSIvPgogIDxvdXItbnVtYmVy
+        PjAwMDAwMDAwMDAxMTU8L291ci1udW1iZXI+CiAgPG5hbWU+UmFmYWVsIExp
+        bWE8L25hbWU+CiAgPGFkZHJlc3M+QXYuIENhbmRhbmdvIDMyMSA0ODk8L2Fk
+        ZHJlc3M+CiAgPHppcGNvZGU+MjEzMjQtMDA5PC96aXBjb2RlPgogIDxuZWln
+        aGJvcmhvb2Q+R3VhcmFuaW08L25laWdoYm9yaG9vZD4KICA8Y2l0eT5SaW8g
+        ZGUgSmFuZWlybzwvY2l0eT4KICA8c3RhdGU+Uko8L3N0YXRlPgogIDxjbnBq
+        LWNwZiB0eXBlPSJDcGYiPjAwMC4yMzMuNzcxLTE5PC9jbnBqLWNwZj4KICA8
+        ZGVzY3JpcHRpb24+VGVzdGU8L2Rlc2NyaXB0aW9uPgogIDxpbnN0cnVjdGlv
+        bnM+TsOjbyByZWNlYmVyIGFww7NzIG8gdmVuY2ltZW50bzwvaW5zdHJ1Y3Rp
+        b25zPgogIDxjdXJyZW5jeT5SJDwvY3VycmVuY3k+CiAgPHF1YW50aXR5IG5p
+        bD0idHJ1ZSIvPgogIDxndWFyYW50b3IgbmlsPSJ0cnVlIi8+CiAgPGRvY3Vt
+        ZW50LXR5cGUgbmlsPSJ0cnVlIi8+CiAgPGFjY2VwdGFuY2U+TjwvYWNjZXB0
+        YW5jZT4KICA8c3RhdHVzPmQ8L3N0YXR1cz4KICA8ZW1haWwtc2VudC1hdCB0
+        eXBlPSJkYXRlVGltZSIgbmlsPSJ0cnVlIi8+CiAgPGNvbW1lbnRzIG5pbD0i
+        dHJ1ZSIvPgogIDxiYW5rLWJpbGxldC1hY2NvdW50LWlkIHR5cGU9ImludGVn
+        ZXIiPjQyPC9iYW5rLWJpbGxldC1hY2NvdW50LWlkPgogIDxsaW5lIG5pbD0i
+        dHJ1ZSIvPgogIDxtZXRhIHR5cGU9ImJpbmFyeSIgZW5jb2Rpbmc9ImJhc2U2
+        NCI+ZXlKdmNtUmxjbDlwWkNJNk1qRTVNak13T0RBNUxDSnZjbVJsY2w5dWRX
+        MWlaWElpT2pFd01ESjkKPC9tZXRhPgogIDxwZGYtc3RhdGUgdHlwZT0iaW50
+        ZWdlciI+MTwvcGRmLXN0YXRlPgogIDxwZGYtY3JlYXRlZC1hdCB0eXBlPSJk
+        YXRlVGltZSI+MjAxNC0wOC0wOFQxNzozMTowNC0wMzowMDwvcGRmLWNyZWF0
+        ZWQtYXQ+CiAgPHBkZi1kZWxheWVkLWF0IHR5cGU9ImRhdGVUaW1lIj4yMDE0
+        LTA4LTA4VDE3OjMxOjA0LTAzOjAwPC9wZGYtZGVsYXllZC1hdD4KICA8aHRt
+        bC1zdGF0ZSB0eXBlPSJpbnRlZ2VyIj4wPC9odG1sLXN0YXRlPgogIDxodG1s
+        LWNyZWF0ZWQtYXQgdHlwZT0iZGF0ZVRpbWUiIG5pbD0idHJ1ZSIvPgogIDxo
+        dG1sLWRlbGF5ZWQtYXQgdHlwZT0iZGF0ZVRpbWUiPjIwMTQtMDgtMDhUMTc6
+        MzE6MDUtMDM6MDA8L2h0bWwtZGVsYXllZC1hdD4KICA8YXNzaWdub3ItY29k
+        ZSBuaWw9InRydWUiLz4KICA8cHJvY2Vzc2VkLW91ci1udW1iZXIgbmlsPSJ0
+        cnVlIi8+CiAgPGN1c3RvbWVyLWlkIHR5cGU9ImludGVnZXIiIG5pbD0idHJ1
+        ZSIvPgogIDxwZXJjZW50LWZpbmVzIHR5cGU9ImRlY2ltYWwiPjMuMDwvcGVy
+        Y2VudC1maW5lcz4KICA8cGVyY2VudC1pbnRlcmVzdC1kYXkgdHlwZT0iZGVj
+        aW1hbCI+NC4wPC9wZXJjZW50LWludGVyZXN0LWRheT4KICA8ZW1haWwtc3Rh
+        dGUgdHlwZT0iaW50ZWdlciIgbmlsPSJ0cnVlIi8+CiAgPGVtYWlsLWRlbGF5
+        ZWQtYXQgdHlwZT0iZGF0ZVRpbWUiIG5pbD0idHJ1ZSIvPgogIDxob21vbG9n
+        YXRpb24gdHlwZT0iYm9vbGVhbiI+ZmFsc2U8L2hvbW9sb2dhdGlvbj4KICA8
+        bm90aWZ5LW92ZXJkdWUgdHlwZT0iYm9vbGVhbiI+ZmFsc2U8L25vdGlmeS1v
+        dmVyZHVlPgogIDxvdmVyZHVlLW5vdGlmaWVkLWF0IHR5cGU9ImRhdGVUaW1l
+        IiBuaWw9InRydWUiLz4KICA8cGFyY2VsIHR5cGU9ImludGVnZXIiPjE8L3Bh
+        cmNlbD4KICA8c3ViZGl2aXNpb24tcGFyZW50LWlkIHR5cGU9ImludGVnZXIi
+        IG5pbD0idHJ1ZSIvPgogIDxraW5kPm5vcm1hbDwva2luZD4KICA8YmFuay1i
+        aWxsZXQtc3Vic2NyaXB0aW9uLWlkIHR5cGU9ImludGVnZXIiIG5pbD0idHJ1
+        ZSIvPgogIDxleHRlcm5hbC1mb3JtLWlkIHR5cGU9ImludGVnZXIiIG5pbD0i
+        dHJ1ZSIvPgogIDxvdXItbnVtYmVyLXJhdyBuaWw9InRydWUiLz4KICA8bG9n
+        by11cmwgbmlsPSJ0cnVlIi8+CiAgPGV4dGVybmFsLWxpbms+aHR0cDovL2Jv
+        bGUudG8vbmR5dmFxbGk8L2V4dGVybmFsLWxpbms+CiAgPGhhc2hjb2RlPm5k
+        eXZhcWxpPC9oYXNoY29kZT4KICA8Y2FybmV0LWV4dGVybmFsLWxpbmsgbmls
+        PSJ0cnVlIi8+CiAgPGFsbC1wYXJjZWxzLWlkcyB0eXBlPSJhcnJheSI+CiAg
+        ICA8YWxsLXBhcmNlbHMtaWQgdHlwZT0iaW50ZWdlciI+NTAxMDMwPC9hbGwt
+        cGFyY2Vscy1pZD4KICA8L2FsbC1wYXJjZWxzLWlkcz4KICA8YW1vdW50IHR5
+        cGU9ImZsb2F0Ij43MC4wPC9hbW91bnQ+CiAgPHBhaWRfYW1vdW50IHR5cGU9
+        ImZsb2F0Ij4wLjA8L3BhaWRfYW1vdW50PgogIDxkb2N1bWVudF9hbW91bnQg
+        dHlwZT0iZmxvYXQiPjAuMDwvZG9jdW1lbnRfYW1vdW50PgogIDxkaXNjb3Vu
+        dF9hbW91bnQgdHlwZT0iZmxvYXQiPjEuMDwvZGlzY291bnRfYW1vdW50Pgog
+        IDxvdGhlcl9hbW91bnRfdG9fYWRkIHR5cGU9ImZsb2F0Ij4yLjA8L290aGVy
+        X2Ftb3VudF90b19hZGQ+CiAgPGJhbmtfcmF0ZSB0eXBlPSJmbG9hdCI+MC4w
+        PC9iYW5rX3JhdGU+CjwvYmFuay1iaWxsZXQ+Cg==
+    http_version:
+  recorded_at: Fri, 08 Aug 2014 20:31:06 GMT
+recorded_with: VCR 2.9.2

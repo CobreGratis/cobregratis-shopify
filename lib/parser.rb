@@ -28,6 +28,8 @@ class Parser
       city: city,
       state: state,
       zipcode: zipcode,
+      generate_on_creation: true,
+      send_email_on_creation: true,
       email: {
         name: email_name,
         address: email_address

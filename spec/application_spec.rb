@@ -11,11 +11,11 @@ describe 'main application' do
   describe "GET /" do
     it 'should be ok' do
       get '/'
-      last_response.should be_ok
+      expect(last_response).to be_ok
     end
     it "should have content" do
       get '/'
-      last_response.body.should =~ /middleware/
+      expect(last_response.body).to match(/middleware/)
     end
   end
 
@@ -25,8 +25,8 @@ describe 'main application' do
       let(:token) { ENV['COBREGRATIS_TOKEN'] }
       it 'should be ok' do
         VCR.use_cassette('valid-token') do
-          post "/#{token}/1349/277", request_body, {'Content-Type' => 'application/json'}
-          last_response.should be_ok
+          post "/#{token}/57/42", request_body, {'Content-Type' => 'application/json'}
+          expect(last_response).to be_ok
         end
       end
     end
@@ -34,8 +34,8 @@ describe 'main application' do
       let(:token) { 'invalid-token' }
       it 'should be 500' do
         VCR.use_cassette('invalid-token') do
-          post "/#{token}/1349/277", request_body, {'Content-Type' => 'application/json'}
-          last_response.status.should == 500
+          post "/#{token}/57/42", request_body, {'Content-Type' => 'application/json'}
+          expect(last_response.status).to eq(500)
         end
       end
     end
