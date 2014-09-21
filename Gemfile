@@ -7,6 +7,7 @@ gem 'cobregratis', '0.4.3'
 gem 'maruku', '0.7.2'
 gem 'haml', '4.0.5'
 gem 'rack-canonical-host', '0.1.0'
+gem 'rake', '10.3.2'
 
 group :development do
 	gem 'shotgun', '0.9'
