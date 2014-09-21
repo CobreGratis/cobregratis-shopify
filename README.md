@@ -6,7 +6,7 @@ O [Cobre Grátis] [cg] é um sistema de emissão e gerenciamento de boletos banc
 
 O [Shopify] [shopify] é um sistema de e-commerce.
 
-É necessário ter contratado o Plano Premium do [Cobre Grátis] [cg] para usar este recurso.
+É necessário ter contratado o Plano Pago do [Cobre Grátis] [cg] para usar este recurso.
 
 Para usufruir da integração, não é necessário usar este código de programação. Basta usar o serviço hospedado.
 
@@ -47,15 +47,15 @@ Para usufruir da integração, não é necessário usar este código de programa
 
 	1. Em *URL* coloque o endereço:
 
-			http://shopify.cobregratis.com.br/TOKEN/IDSERVICO/IDCONTA
+			http://shopify.cobregratis.com.br/TOKEN/IDMODELO/IDCONTA
 
 		*TOKEN* é o token de autenticação do seu usuário no Cobre Grátis.
 		Para pegar o *Token de Autenticação* do seu usuário, acesse a [página Meu Perfil do Cobre Grátis] [myinfo]
 
-		*IDSERVICO* é o ID do *Serviço* para o qual o boleto será gerado.
+		*IDMODELO* é o ID do *Modelo* para o qual o boleto será gerado.
 		*IDCONTA* é o ID da *Conta* que será usada para geração do boleto.
 
-		Para pegar o ID do Serviço e o ID da Conta, acesse a [página Integração do Cobre Grátis] [integration]
+		Para pegar o ID do Modelo e o ID da Conta, acesse a [página Integração do Cobre Grátis] [integration]
 
 	1. Clique em *Save webhook*
 
