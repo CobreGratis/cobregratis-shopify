@@ -38,7 +38,7 @@ describe Parser do
     it {
       expect(parser.bank_billet_attributes).to eq({
         amount: 70.00,
-        expire_at: Date.parse('2014-01-11'),
+        expire_at: Date.parse('2014-01-10'),
         name: "Rafael Lima",
         cnpj_cpf: "89234567831",
         address: "Av. Candango 321 489",
