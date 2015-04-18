@@ -32,10 +32,13 @@ post '/:token/:service_id/:bank_billet_account_id' do
     LOG.info "----> Bank Billet Attributes = #{bank_billet_attributes.inspect}"
     if Cobregratis::BankBillet.create(bank_billet_attributes)
       LOG.info "----> Bank billet created!"
+      status 200
     else
       LOG.info "----> Error creating bank billet."
+      status 422
     end
   else
     LOG.info "---> Request ignored."
+    status 200
   end
 end
