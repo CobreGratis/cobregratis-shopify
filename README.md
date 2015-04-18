@@ -66,7 +66,7 @@ Para usufruir da integração, não é necessário usar este código de programa
 Em caso de dúvidas, abra um ticket no [suporte] [support].
 
   [cg]: http://cobregratis.com.br
-  [shopify]: http://shopify.com/?ref=cobregratis
+  [shopify]: http://pt.shopify.com/?ref=cobregratis
   [integration]: https://app.cobregratis.com.br/integration
   [myinfo]: https://app.cobregratis.com.br/myinfo
   [support]: http://suporte.cobregratis.com.br
