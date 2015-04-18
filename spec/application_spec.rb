@@ -25,7 +25,7 @@ describe 'main application' do
       let(:token) { ENV['COBREGRATIS_TOKEN'] }
       it 'should be ok' do
         VCR.use_cassette('valid-token') do
-          post "/#{token}/57/42", request_body, {'Content-Type' => 'application/json'}
+          post "/#{token}/57/42", request_body, { 'Content-Type' => 'application/json' }
           expect(last_response).to be_ok
         end
       end
@@ -34,7 +34,7 @@ describe 'main application' do
       let(:token) { 'invalid-token' }
       it 'should be 500' do
         VCR.use_cassette('invalid-token') do
-          post "/#{token}/57/42", request_body, {'Content-Type' => 'application/json'}
+          post "/#{token}/57/42", request_body, { 'Content-Type' => 'application/json' }
           expect(last_response.status).to eq(500)
         end
       end
