@@ -41,7 +41,7 @@ Para usufruir da integração, não é necessário usar este código de programa
 
 	1. Clique em *Create a webhook* na área chamada Webhooks no final da página
 
-	1. Seleciona *Order update* em *Event*
+	1. Seleciona *Order creation* em *Event*
 
 	1. Deixe selecionado *JSON* em *Format*
 
