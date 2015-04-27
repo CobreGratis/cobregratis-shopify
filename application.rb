@@ -30,11 +30,13 @@ post '/:token/:service_id/:bank_billet_account_id' do
     Cobregratis::BankBillet.format = :xml
     bank_billet_attributes = parser.bank_billet_attributes.merge(service_id: params[:service_id], bank_billet_account_id: params[:bank_billet_account_id])
     LOG.info "----> Bank Billet Attributes = #{bank_billet_attributes.inspect}"
-    if Cobregratis::BankBillet.create(bank_billet_attributes)
+    bank_billet = Cobregratis::BankBillet.create(bank_billet_attributes)
+    if bank_billet.valid?
       LOG.info "----> Bank billet created!"
       status 200
     else
       LOG.info "----> Error creating bank billet."
+      LOG.info bank_billet.errors.full_messages
       status 422
     end
   else
