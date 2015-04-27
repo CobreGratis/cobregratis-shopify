@@ -13,8 +13,7 @@ class Parser
     !cancelled? and
     currency_brl? and
     financial_status_pending? and
-    manual_processing_method? and
-    correct_gateway?
+    manual_processing_method?
   end
 
   def bank_billet_attributes
